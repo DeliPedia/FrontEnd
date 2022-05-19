@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 function Home() {
     const { t, languages, changeLanguage } = useI18n("home")
-    const [ on, setOn ] = useState<boolean>(false)
+    const [on, setOn] = useState<boolean>(false)
     return (
         <SHome on={on}>
             <button onClick={() => setOn(!on)}>{on ? "on" : "off"}</button>

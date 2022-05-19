@@ -1,6 +1,4 @@
-const GoogleLoginButton =
-    require("~/assets/img/signInWithGoogleButton.png").default
+const SearchIcon = require("~/assets/img/searchIcon.png").default
+const GpsIcon = require("~/assets/img/gpsIcon.png").default
 
-export {
-    GoogleLoginButton,
-}
+export { SearchIcon, GpsIcon }
