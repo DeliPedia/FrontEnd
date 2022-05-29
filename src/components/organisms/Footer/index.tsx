@@ -3,44 +3,50 @@ import styled from "styled-components"
 
 export default function Footer() {
     return (
-        <SFooter>
-            <SFooterMenu>
-                <SFooterMenuItem>개인정보처리방침</SFooterMenuItem>
-                <SLine />
-                <SFooterMenuItem>이용약관</SFooterMenuItem>
-                <SLine />
-                <SFooterMenuItem>위치기반 서비스 이용약관</SFooterMenuItem>
-            </SFooterMenu>
-            <SFooterMenu2>
-                <SFooterMenuItem>DeliPedia</SFooterMenuItem>
-                <SLine />
-                <SFooterMenuItem>제작: 송승현, 차재윤, 황두일</SFooterMenuItem>
-                <SLine />
-                <SFooterMenuItem>
-                    소재지: 서울특별시 강서구 공항대로 163
-                </SFooterMenuItem>
-            </SFooterMenu2>
-            <SFooterMenu2>
-                <SFooterMenuItem>
-                    이메일문의: h2ne1.public@gmail.com
-                </SFooterMenuItem>
-            </SFooterMenu2>
-            <SFooterMenu3>
-                <SFooterMenuItem>
-                    전화문의: 02-1234-5678 (평일 : 10:00 ~ 19:00, 주말/공휴일
-                    제외)
-                </SFooterMenuItem>
-                <SFooterMenuItem>
-                    copyright &copy; h&c team2 All rights reserved
-                </SFooterMenuItem>
-            </SFooterMenu3>
-        </SFooter>
+        <SFooterWrapper>
+            <SFooter>
+                <SFooterMenu>
+                    <SFooterMenuItemBold>개인정보처리방침</SFooterMenuItemBold>
+                    <SLine />
+                    <SFooterMenuItemBold>이용약관</SFooterMenuItemBold>
+                    <SLine />
+                    <SFooterMenuItemBold>위치기반 서비스 이용약관</SFooterMenuItemBold>
+                </SFooterMenu>
+                <SFooterMenu2>
+                    <SFooterMenuItemBold>DeliPedia</SFooterMenuItemBold>
+                    <SLine />
+                    <SFooterMenuItemNormal>제작: 송승현, 차재윤, 황두일</SFooterMenuItemNormal>
+                    <SLine />
+                    <SFooterMenuItemNormal>
+                        소재지: 서울특별시 강서구 공항대로 163
+                    </SFooterMenuItemNormal>
+                </SFooterMenu2>
+                <SFooterMenu2>
+                    <SFooterMenuItemNormal>
+                        이메일문의: h2ne1.public@gmail.com
+                    </SFooterMenuItemNormal>
+                </SFooterMenu2>
+                <SFooterMenu3>
+                    <SFooterMenuItemNormal>
+                        전화문의: 02-1234-5678 (평일 : 10:00 ~ 19:00, 주말/공휴일
+                        제외)
+                    </SFooterMenuItemNormal>
+                    <SFooterMenuItemNormal>
+                        copyright &copy; h&c team2 All rights reserved
+                    </SFooterMenuItemNormal>
+                </SFooterMenu3>
+            </SFooter>
+        </SFooterWrapper>
     )
 }
 
+const SFooterWrapper = styled.div`
+    background: #fff;
+`
+
 const SFooter = styled.div`
     padding: 25px 0;
-    margin: 0 15%;
+    margin: 0 22%;
 `
 
 const SFooterMenu = styled.ul`
@@ -66,9 +72,14 @@ const SFooterMenu3 = styled.ul`
     margin: 20px 0 0 0;
 `
 
-const SFooterMenuItem = styled.li`
+const SFooterMenuItemBold = styled.li`
     font-size: 15px;
     font-weight: 500;
+    margin: 0 15px 0 15px;
+`
+
+const SFooterMenuItemNormal = styled.li`
+    font-size: 15px;
     margin: 0 15px 0 15px;
 `
 

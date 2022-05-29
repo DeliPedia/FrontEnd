@@ -6,6 +6,8 @@ import { loginState } from "../recoil"
 import Header from "../components/organisms/Header"
 import NavBar from "../components/organisms/NavBar"
 import Footer from "../components/organisms/Footer"
+import LocationService from "./Home/LocationService"
+import RestaurantMagazine from "./Home/RestaurantMagazine"
 
 export default function RootRouter() {
     const userLoginChecker = () => {
@@ -18,6 +20,8 @@ export default function RootRouter() {
             <SWrapper>
                 <Header />
                 <NavBar />
+                <LocationService />
+                <RestaurantMagazine />
                 <Footer />
             </SWrapper>
         </>
@@ -25,7 +29,8 @@ export default function RootRouter() {
 }
 
 const SWrapper = styled.div`
-    min-width: 1190px;
+    min-width: 1140px;
+    background: #f0f0f3;
 `
 
 // const SMainWrapper = styled.div`

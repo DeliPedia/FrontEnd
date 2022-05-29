@@ -51,7 +51,7 @@ const SSearchBarWrapper = styled.div<{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: ${(props) => props.backgroundColor};
+    background: ${(props) => props.backgroundColor};
     border-radius: 21px;
     padding: ${(props) => props.padding};
     margin: ${(props) => props.margin};
@@ -62,10 +62,12 @@ const SCustomInput = styled.input<{
     fontColor: string
     placeholderColor: string
 }>`
+    width: 100%;
     font-size: ${(props) => props.fontSize}px;
     font-weight: 500;
     color: ${(props) => props.fontColor};
     border: none;
+    background: none;
     &:placeholder {
         color: ${(props) => props.placeholderColor};
     }
