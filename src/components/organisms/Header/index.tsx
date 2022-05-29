@@ -1,12 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 import SearchBar from "~/components/molecules/SearchBar"
+import * as Image from "~/assets/imageImport"
 
 export default function Header() {
     return (
         <SHeader>
             <SHeaderWrapper>
-                <SLogo src="" />
+                <SLogo src={Image.LogoImage} alt={"logo-image"} />
                 <SSearchBarWrapper>
                     <SearchBar
                         type={"text"}
@@ -40,7 +41,10 @@ const SHeaderWrapper = styled.div`
     margin: 0 22%;
 `
 
-const SLogo = styled.img``
+const SLogo = styled.img`
+    width: 50px;
+    height: 50px;
+`
 
 const SSearchBarWrapper = styled.div`
     min-width: 560px;

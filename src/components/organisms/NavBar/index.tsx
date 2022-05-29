@@ -52,7 +52,7 @@ const SNavBarRight = styled.ul`
 `
 
 const SNavBarItem = styled.li`
-    margin-left: 30px;
+    margin-right: 30px;
 `
 
 const SNavBarGps = styled.li``

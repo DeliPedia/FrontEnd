@@ -8,6 +8,7 @@ import NavBar from "../components/organisms/NavBar"
 import Footer from "../components/organisms/Footer"
 import LocationService from "./Home/LocationService"
 import RestaurantMagazine from "./Home/RestaurantMagazine"
+import MiddleBanner from "./Home/MiddleBanner"
 
 export default function RootRouter() {
     const userLoginChecker = () => {
@@ -22,6 +23,7 @@ export default function RootRouter() {
                 <NavBar />
                 <LocationService />
                 <RestaurantMagazine />
+                <MiddleBanner />
                 <Footer />
             </SWrapper>
         </>
