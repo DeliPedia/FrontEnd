@@ -9,6 +9,7 @@ import Footer from "../components/organisms/Footer"
 import LocationService from "./Home/LocationService"
 import RestaurantMagazine from "./Home/RestaurantMagazine"
 import MiddleBanner from "./Home/MiddleBanner"
+import RealtimeRate from "./Home/RealtimeRate"
 
 export default function RootRouter() {
     const userLoginChecker = () => {
@@ -17,22 +18,27 @@ export default function RootRouter() {
     }
     userLoginChecker()
     return (
-        <>
-            <SWrapper>
+        <SWrapper>
+            <SRouteWrapper>
                 <Header />
                 <NavBar />
                 <LocationService />
                 <RestaurantMagazine />
                 <MiddleBanner />
+                <RealtimeRate />
                 <Footer />
-            </SWrapper>
-        </>
+            </SRouteWrapper>
+        </SWrapper>
     )
 }
 
 const SWrapper = styled.div`
-    min-width: 1140px;
     background: #f0f0f3;
+    box-sizing: border-box;
+`
+
+const SRouteWrapper = styled.div`
+    margin: 0 auto;
 `
 
 // const SMainWrapper = styled.div`

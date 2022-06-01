@@ -38,7 +38,8 @@ const SHeaderWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    margin: 0 22%;
+    width: 1024px;
+    margin: 0 auto;
 `
 
 const SLogo = styled.img`

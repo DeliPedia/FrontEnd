@@ -6,18 +6,25 @@ export interface ISquareButton {
     backgroundColor: string
     color: string
     label: string
-    borderOption: string;
-    borderRadius: number;
+    borderOption: string
+    borderRadius: number
 }
 
 export default function SquareButton(props: ISquareButton) {
-    const { padding, backgroundColor, color, label, borderOption, borderRadius } = props
+    const {
+        padding,
+        backgroundColor,
+        color,
+        label,
+        borderOption,
+        borderRadius,
+    } = props
     return (
-        <SSquareButton 
-            padding={padding} 
-            backgroundColor={backgroundColor} 
-            color={color} 
-            borderOption={borderOption} 
+        <SSquareButton
+            padding={padding}
+            backgroundColor={backgroundColor}
+            color={color}
+            borderOption={borderOption}
             borderRadius={borderRadius}
         >
             {label}
@@ -25,18 +32,19 @@ export default function SquareButton(props: ISquareButton) {
     )
 }
 
-const SSquareButton = styled.div<{ 
-    padding: string; 
-    backgroundColor: string; 
-    color: string; 
-    borderOption: string; 
-    borderRadius: number 
+const SSquareButton = styled.div<{
+    padding: string
+    backgroundColor: string
+    color: string
+    borderOption: string
+    borderRadius: number
 }>`
     padding: ${(props) => props.padding};
     background: ${(props) => props.backgroundColor};
     color: ${(props) => props.color};
-    border: ${(props) => props.borderOption}
+    border: ${(props) => props.borderOption};
     border-radius: ${(props) => props.borderRadius}px;
     text-align: center;
     cursor: pointer;
+    width: max-content;
 `

@@ -31,10 +31,11 @@ const SNavBarWrapper = styled.div`
 `
 
 const SNavBarItemWrapper = styled.div`
-    margin: 0 22%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 1024px;
+    margin: 0 auto;
 `
 
 const SNavBarLeft = styled.ul`

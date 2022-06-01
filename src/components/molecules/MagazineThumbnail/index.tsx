@@ -20,8 +20,8 @@ export default function MagazineThumbnail(props: IMagazineThumbnail) {
 
 const SRestaurantMagazine = styled.div`
     margin: 0 10px;
-    width: 210px;
-    height: 210px;
+    width: 230px;
+    height: 230px;
     position: relative;
     overflow: hidden;
     cursor: pointer;

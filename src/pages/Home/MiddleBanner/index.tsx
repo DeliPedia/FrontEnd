@@ -8,7 +8,8 @@ export default function MiddleBanner() {
             <SMainBannerBackground src={Image.BannerBackground} />
             <SFlexWrapper>
                 <STitle>
-                    솔직한 평가는 다른 사용자가<br />
+                    솔직한 평가는 다른 사용자가
+                    <br />
                     진짜 맛집을 찾는데 큰 도움을 줍니다.(300p 적립)
                 </STitle>
                 <SCoinImage src={Image.MainBannerCoin} />
@@ -18,11 +19,12 @@ export default function MiddleBanner() {
 }
 
 const SMiddleBannerWrapper = styled.div`
-    margin: 22px 22%;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 1024px;
+    margin: 20px auto;
 `
 
 const SFlexWrapper = styled.div`

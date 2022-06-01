@@ -10,15 +10,19 @@ export default function Footer() {
                     <SLine />
                     <SFooterMenuItemBold>이용약관</SFooterMenuItemBold>
                     <SLine />
-                    <SFooterMenuItemBold>위치기반 서비스 이용약관</SFooterMenuItemBold>
+                    <SFooterMenuItemBold>
+                        위치기반 서비스 이용약관
+                    </SFooterMenuItemBold>
                 </SFooterMenu>
                 <SFooterMenu2>
                     <SFooterMenuItemBold>DeliPedia</SFooterMenuItemBold>
                     <SLine />
-                    <SFooterMenuItemNormal>제작: 송승현, 차재윤, 황두일</SFooterMenuItemNormal>
+                    <SFooterMenuItemNormal>
+                        제작: 송승현, 차재윤, 황두일
+                    </SFooterMenuItemNormal>
                     <SLine />
                     <SFooterMenuItemNormal>
-                        소재지: 서울 금천구 벚꽃로 309
+                        소재지: 서울특별시 중구 세종대로 110
                     </SFooterMenuItemNormal>
                 </SFooterMenu2>
                 <SFooterMenu2>
@@ -28,8 +32,8 @@ export default function Footer() {
                 </SFooterMenu2>
                 <SFooterMenu3>
                     <SFooterMenuItemNormal>
-                        전화문의: 02-1234-5678 (평일 : 10:00 ~ 19:00, 주말/공휴일
-                        제외)
+                        전화문의: 02-1234-5678 (평일 : 10:00 ~ 19:00,
+                        주말/공휴일 제외)
                     </SFooterMenuItemNormal>
                     <SFooterMenuItemNormal>
                         copyright &copy; h&c team2 All rights reserved
@@ -46,7 +50,8 @@ const SFooterWrapper = styled.div`
 
 const SFooter = styled.div`
     padding: 25px 0;
-    margin: 0 22%;
+    width: 1024px;
+    margin: 0 auto;
 `
 
 const SFooterMenu = styled.ul`
