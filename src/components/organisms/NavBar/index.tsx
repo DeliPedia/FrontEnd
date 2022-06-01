@@ -53,6 +53,7 @@ const SNavBarRight = styled.ul`
 
 const SNavBarItem = styled.li`
     margin-right: 30px;
+    cursor: pointer;
 `
 
 const SNavBarGps = styled.li``

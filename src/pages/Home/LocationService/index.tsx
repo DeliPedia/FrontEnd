@@ -1,8 +1,52 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import SquareButton from "../../../components/molecules/SquareButton"
 
+const useGeoLocation = (options = {}) => {
+    const [location, setLocation] = useState({})
+    const [error, setError] = useState("")
+
+    const handleSuccess = (pos: any) => {
+        const { latitude, longitude } = pos.coords
+
+        setLocation({
+            latitude,
+            longitude,
+        })
+    }
+
+    const handleError = (error: any) => {
+        setError(error.message)
+    }
+
+    useEffect(() => {
+        const { geolocation } = navigator;
+        if (!geolocation) {
+            setError("Geolocation is not supported.");
+            return;
+        }
+
+        geolocation.getCurrentPosition(handleSuccess, handleError, options);
+    }, [options])
+
+    return { location, error };
+}
+
 export default function LocationService() {
+
+    const geolocationOption = {
+        enableHighAccuracy: true,
+        timeout: 1000 * 60 * 1,
+        maximumAge: 1000 * 3600 * 24,
+    }
+
+    const latLong = () => {
+        const { location: currentLocation, error: currentError } = useGeoLocation(geolocationOption)
+        useEffect(() => {
+            console.log('컴포넌트 렌더링')
+        }, [])
+    }
+
     return (
         <SLocationWrapper>
             <STitleWrapper>

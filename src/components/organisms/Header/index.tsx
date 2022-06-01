@@ -60,4 +60,5 @@ const SMenu = styled.div`
     font-size: 14px;
     color: #505050;
     margin-left: 15px;
+    cursor: pointer;
 `

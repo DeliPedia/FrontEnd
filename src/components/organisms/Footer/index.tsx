@@ -18,7 +18,7 @@ export default function Footer() {
                     <SFooterMenuItemNormal>제작: 송승현, 차재윤, 황두일</SFooterMenuItemNormal>
                     <SLine />
                     <SFooterMenuItemNormal>
-                        소재지: 서울특별시 강서구 공항대로 163
+                        소재지: 서울 금천구 벚꽃로 309
                     </SFooterMenuItemNormal>
                 </SFooterMenu2>
                 <SFooterMenu2>
