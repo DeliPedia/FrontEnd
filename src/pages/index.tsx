@@ -6,10 +6,8 @@ import { loginState } from "../recoil"
 import Header from "../components/organisms/Header"
 import NavBar from "../components/organisms/NavBar"
 import Footer from "../components/organisms/Footer"
-import LocationService from "./Home/LocationService"
-import RestaurantMagazine from "./Home/RestaurantMagazine"
-import MiddleBanner from "./Home/MiddleBanner"
-import RealtimeRate from "./Home/RealtimeRate"
+import { Routes, Route } from "react-router-dom"
+import Home from "./Home"
 
 export default function RootRouter() {
     const userLoginChecker = () => {
@@ -22,10 +20,9 @@ export default function RootRouter() {
             <SRouteWrapper>
                 <Header />
                 <NavBar />
-                <LocationService />
-                <RestaurantMagazine />
-                <MiddleBanner />
-                <RealtimeRate />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                </Routes>
                 <Footer />
             </SRouteWrapper>
         </SWrapper>

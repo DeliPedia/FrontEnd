@@ -2,12 +2,15 @@ import React from "react"
 import styled from "styled-components"
 import SearchBar from "~/components/molecules/SearchBar"
 import * as Image from "~/assets/imageImport"
+import { Link } from "react-router-dom"
 
 export default function Header() {
     return (
         <SHeader>
             <SHeaderWrapper>
-                <SLogo src={Image.LogoImage} alt={"logo-image"} />
+                <SLink to="/">
+                    <SLogo src={Image.LogoImage} alt={"DeliPedia"} />
+                </SLink>
                 <SSearchBarWrapper>
                     <SearchBar
                         type={"text"}
@@ -41,6 +44,8 @@ const SHeaderWrapper = styled.div`
     width: 1024px;
     margin: 0 auto;
 `
+
+const SLink = styled(Link)``
 
 const SLogo = styled.img`
     width: 50px;

@@ -1,34 +1,19 @@
-import React, { useState } from "react"
-import useI18n from "~/hooks/useI18n"
+import React from "react"
 import styled from "styled-components"
+import LocationService from "./LocationService"
+import MiddleBanner from "./MiddleBanner"
+import RealtimeRate from "./RealtimeRate"
+import RestaurantMagazine from "./RestaurantMagazine"
 
-function Home() {
-    const { t, languages, changeLanguage } = useI18n("home")
-    const [on, setOn] = useState<boolean>(false)
+export default function Home() {
     return (
-        <SHome on={on}>
-            <button onClick={() => setOn(!on)}>{on ? "on" : "off"}</button>
-            {on && <div>ON</div>}
-            <div>{t("title")}</div>
-            {languages.map((lang) => (
-                <button key={lang} onClick={() => changeLanguage(lang)}>
-                    {t(`common:lang.${lang}`)}
-                </button>
-            ))}
+        <SHome>
+            <LocationService />
+            <RestaurantMagazine />
+            <MiddleBanner />
+            <RealtimeRate />
         </SHome>
     )
 }
 
-export default Home
-
-const SHome = styled.div<{ on?: boolean }>`
-    color: ${(props) => props.theme.color.Primary};
-    ${(props) => props.on && "background: yellow"};
-    ${(props) => props.theme.media.small`
-        background: blue;
-    `};
-    button {
-        padding: 8px;
-        border: 1px solid black;
-    }
-`
+const SHome = styled.div``
