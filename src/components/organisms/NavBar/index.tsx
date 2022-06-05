@@ -1,17 +1,30 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import styled from "styled-components"
 import * as Image from "../../../assets/imageImport"
+
+import { PAGE_PATHS } from "~/constant"
 
 export default function NavBar() {
     return (
         <SNavBarWrapper>
             <SNavBarItemWrapper>
                 <SNavBarLeft>
-                    <SNavBarItem>소개</SNavBarItem>
-                    <SNavBarItem>이용안내</SNavBarItem>
-                    <SNavBarItem>자주하는 질문</SNavBarItem>
-                    <SNavBarItem>매거진</SNavBarItem>
-                    <SNavBarItem>공지사항</SNavBarItem>
+                    <SNavBarItem>
+                        <SLink to={PAGE_PATHS.Introduce}>소개</SLink>
+                    </SNavBarItem>
+                    <SNavBarItem>
+                        <SLink to={PAGE_PATHS.HowToUse}>이용안내</SLink>
+                    </SNavBarItem>
+                    <SNavBarItem>
+                        <SLink to={PAGE_PATHS.Question}>자주하는 질문</SLink>
+                    </SNavBarItem>
+                    <SNavBarItem>
+                        <SLink to={PAGE_PATHS.Magazine}>매거진</SLink>
+                    </SNavBarItem>
+                    <SNavBarItem>
+                        <SLink to={PAGE_PATHS.Notice}>공지사항</SLink>
+                    </SNavBarItem>
                 </SNavBarLeft>
                 <SNavBarRight>
                     <SNavBarGps>
@@ -56,6 +69,8 @@ const SNavBarItem = styled.li`
     margin-right: 30px;
     cursor: pointer;
 `
+
+const SLink = styled(Link)``
 
 const SNavBarGps = styled.li``
 

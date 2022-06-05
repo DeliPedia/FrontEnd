@@ -4,11 +4,13 @@ import SearchBar from "~/components/molecules/SearchBar"
 import * as Image from "~/assets/imageImport"
 import { Link } from "react-router-dom"
 
+import { PAGE_PATHS } from "~/constant"
+
 export default function Header() {
     return (
         <SHeader>
             <SHeaderWrapper>
-                <SLink to="/">
+                <SLink to={PAGE_PATHS.Home}>
                     <SLogo src={Image.LogoImage} alt={"DeliPedia"} />
                 </SLink>
                 <SSearchBarWrapper>
@@ -24,8 +26,12 @@ export default function Header() {
                     />
                 </SSearchBarWrapper>
                 <SSignMenuWrapper>
-                    <SMenu>로그인</SMenu>
-                    <SMenu>회원가입</SMenu>
+                    <SMenu>
+                        <SLink to={PAGE_PATHS.Login}>로그인</SLink>
+                    </SMenu>
+                    <SMenu>
+                        <SLink to={PAGE_PATHS.SignUp}>회원가입</SLink>
+                    </SMenu>
                 </SSignMenuWrapper>
             </SHeaderWrapper>
         </SHeader>

@@ -7,7 +7,16 @@ import Header from "../components/organisms/Header"
 import NavBar from "../components/organisms/NavBar"
 import Footer from "../components/organisms/Footer"
 import { Routes, Route } from "react-router-dom"
+
+import { PAGE_PATHS } from "../constant"
 import Home from "./Home"
+import Login from "../pages/Auth/Login"
+import SignUp from "../pages/Auth/SignUp"
+import Introduce from "./Introduce"
+import HowToUse from "./HowToUse"
+import Question from "./Question"
+import Magazine from "./Magazine"
+import Notice from "./Notice"
 
 export default function RootRouter() {
     const userLoginChecker = () => {
@@ -21,7 +30,17 @@ export default function RootRouter() {
                 <Header />
                 <NavBar />
                 <Routes>
-                    <Route path="/" element={<Home />} />
+                    <Route path={PAGE_PATHS.Home} element={<Home />} />
+                    <Route path={PAGE_PATHS.SignUp} element={<SignUp />} />
+                    <Route path={PAGE_PATHS.Login} element={<Login />} />
+                    <Route
+                        path={PAGE_PATHS.Introduce}
+                        element={<Introduce />}
+                    />
+                    <Route path={PAGE_PATHS.HowToUse} element={<HowToUse />} />
+                    <Route path={PAGE_PATHS.Question} element={<Question />} />
+                    <Route path={PAGE_PATHS.Magazine} element={<Magazine />} />
+                    <Route path={PAGE_PATHS.Notice} element={<Notice />} />
                 </Routes>
                 <Footer />
             </SRouteWrapper>
