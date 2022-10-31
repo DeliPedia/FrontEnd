@@ -5,8 +5,12 @@ import * as Image from "~/assets/imageImport"
 import { Link } from "react-router-dom"
 
 import { PAGE_PATHS } from "~/constant"
+import { useSetRecoilState } from "recoil"
+import { modalVisibleState } from "~/recoil"
 
 export default function Header() {
+    const setModalVisible = () => useSetRecoilState<boolean>(modalVisibleState)
+
     return (
         <SHeader>
             <SHeaderWrapper>
@@ -26,9 +30,7 @@ export default function Header() {
                     />
                 </SSearchBarWrapper>
                 <SSignMenuWrapper>
-                    <SMenu>
-                        <SLink to={PAGE_PATHS.Login}>로그인</SLink>
-                    </SMenu>
+                    <SMenu onClick={() => setModalVisible()}>로그인</SMenu>
                     <SMenu>
                         <SLink to={PAGE_PATHS.SignUp}>회원가입</SLink>
                     </SMenu>

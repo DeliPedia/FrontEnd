@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { useSetRecoilState } from "recoil"
-import { loginState } from "../recoil"
+import { useRecoilState } from "recoil"
+import { loginState, modalVisibleState } from "../recoil"
 
 import Header from "../components/organisms/Header"
 import NavBar from "../components/organisms/NavBar"
@@ -18,12 +18,18 @@ import Question from "./Question"
 import Magazine from "./Magazine"
 import Notice from "./Notice"
 
+import Modal from "../components/atoms/Modal"
+import LoginModal from "../components/organisms/LoginModal"
+
 export default function RootRouter() {
     const userLoginChecker = () => {
-        const setLoginState = useSetRecoilState(loginState)
+        const [, setLoginState] = useRecoilState(loginState)
         setLoginState(false)
     }
     userLoginChecker()
+
+    const [isModalVisible] = useRecoilState<boolean>(modalVisibleState)
+
     return (
         <SWrapper>
             <SRouteWrapper>
@@ -43,6 +49,15 @@ export default function RootRouter() {
                     <Route path={PAGE_PATHS.Notice} element={<Notice />} />
                 </Routes>
                 <Footer />
+                {isModalVisible ? (
+                    <Modal
+                        child={<LoginModal />}
+                        existClose={true}
+                        buttonText={"닫기"}
+                    />
+                ) : (
+                    ""
+                )}
             </SRouteWrapper>
         </SWrapper>
     )

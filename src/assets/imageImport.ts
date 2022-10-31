@@ -23,6 +23,8 @@ const EmptyStar = require("~/assets/img/emptyStar.png").default
 
 const ListMoreViewUnder = require("~/assets/img/listMoreViewUnder.png").default
 
+const XButton = require("~/assets/img/xButton.png").default
+
 export {
     LogoImage,
     SearchIcon,
@@ -40,4 +42,5 @@ export {
     BlueStar,
     EmptyStar,
     ListMoreViewUnder,
+    XButton,
 }
